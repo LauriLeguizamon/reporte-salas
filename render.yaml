@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: reporte-salas
+    runtime: node
+    plan: free
+    buildCommand: pnpm install && pnpm --filter @reporte-salas/web run build && pnpm --filter @reporte-salas/api run build
+    startCommand: pnpm --filter @reporte-salas/api run start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DB_PATH
+        value: /var/data/report.db
+    disk:
+      name: sqlite-data
+      mountPath: /var/data
+      sizeGB: 1

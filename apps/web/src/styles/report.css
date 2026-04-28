@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  background: #fff;
+  color: #222;
+}
+
+.app {
+  width: 100%;
+}
+
+/* ── Report Header ── */
+.report-header {
+  background: #1a2744;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.report-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.report-subtitle {
+  font-size: 10px;
+  margin-top: 2px;
+  color: #ccd;
+}
+
+/* ── Filter Bar ── */
+.filter-bar {
+  background: #f0f0f0;
+  padding: 8px 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.filter-bar label {
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.filter-bar select {
+  font-size: 11px;
+  padding: 3px 6px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  min-width: 160px;
+}
+
+/* ── Loading ── */
+.loading {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ── Table ── */
+.report-table-wrapper {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.report-table {
+  width: 100%;
+  min-width: 1400px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 9px;
+}
+
+.report-table td {
+  padding: 2px 4px;
+  border: 1px solid #d0d0d0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Column widths */
+.cell-sala {
+  width: 160px;
+  min-width: 160px;
+}
+
+.cell-pelicula {
+  width: 180px;
+  min-width: 180px;
+}
+
+.cell-num {
+  text-align: right;
+  width: 55px;
+}
+
+.cell-total {
+  font-weight: bold;
+}
+
+.cell-totals-label {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ── Provincia Header ── */
+.provincia-header td {
+  background: #eef3f8;
+  padding: 6px 8px;
+  font-size: 10px;
+  border: 1px solid #c0c0c0;
+}
+
+/* ── Zona Header ── */
+.zona-header td {
+  background: #c57b2a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 4px 8px;
+  border: 1px solid #a86820;
+}
+
+/* ── Column Headers ── */
+.col-header-dates td,
+.col-header-sub td {
+  background: #3a6fa0;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 8px;
+  padding: 2px 3px;
+  border: 1px solid #2d5a85;
+}
+
+.col-header-total {
+  background: #2d5a85 !important;
+}
+
+.col-sub-day {
+  font-size: 8px;
+}
+
+.col-sub-label {
+  font-size: 7px;
+}
+
+/* ── Complejo Header ── */
+.complejo-header td {
+  background: #d4e6f1;
+  font-weight: bold;
+  font-size: 9px;
+  padding: 3px 8px;
+  border: 1px solid #b0c8da;
+  color: #1a2744;
+}
+
+/* ── Data Rows ── */
+.row-even td {
+  background: #fff;
+}
+
+.row-odd td {
+  background: #f5f7fa;
+}
+
+/* ── Totals Rows ── */
+.totals-row td {
+  font-weight: bold;
+  font-size: 9px;
+}
+
+.totals-complejo td {
+  background: #d4e6f1;
+  border-color: #b0c8da;
+}
+
+.totals-zona td {
+  background: #a9cce3;
+  border-color: #8bb5d1;
+  font-size: 9px;
+}
+
+.totals-provincia td {
+  background: #7fb3d8;
+  color: #1a2744;
+  border-color: #6a9fc4;
+}
+
+.totals-pais td {
+  background: #1a2744;
+  color: #fff;
+  font-size: 10px;
+  border-color: #0f1a2e;
+}
+
+/* ── Footer ── */
+.report-footer {
+  text-align: center;
+  padding: 8px;
+  font-size: 9px;
+  color: #888;
+  border-top: 1px solid #ccc;
+}
